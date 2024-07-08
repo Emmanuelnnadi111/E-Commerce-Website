@@ -9,6 +9,7 @@ export default {
     extend: {
       fontSize: {
         small: "6px",
+        medium: "10px",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
