@@ -12,7 +12,7 @@ import {
 const Footer = () => {
   return (
     <footer className="bg-footerCol text-secondaryWhite mt-10 ">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 pt-10 pb-20 w-full p-4 md:w-[80%] lg:w-[90%] m-auto gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 pt-10 pb-20 w-full p-4 md:w-[80%] lg:w-[80%] m-auto gap-3">
         <div className="text-xs flex flex-col gap-5">
           <h1 className="text-lg ">Exclusive</h1>
           <h2>Subscribe</h2>
