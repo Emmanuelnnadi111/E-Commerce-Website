@@ -19,6 +19,7 @@ export default {
         secondaryWhite: "#FAFAFA",
         secondaryGreen: "#00FF66",
         footerCol: "#000000",
+        searchBg: "#F5F5F5",
       },
     },
   },

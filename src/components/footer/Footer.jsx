@@ -6,13 +6,12 @@ import Appstore from "/images/homepage/download-appstore.png";
 import {
   faFacebookF,
   faInstagram,
-  faLinkedin,
   faLinkedinIn,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 const Footer = () => {
   return (
-    <div className="bg-footerCol text-secondaryWhite mt-10 ">
+    <footer className="bg-footerCol text-secondaryWhite mt-10 ">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 pt-10 pb-20 w-full p-4 md:w-[80%] lg:w-[90%] m-auto gap-3">
         <div className="text-xs flex flex-col gap-5">
           <h1 className="text-lg ">Exclusive</h1>
@@ -85,7 +84,7 @@ const Footer = () => {
       <div className="text-center text-xs py-10 opacity-30">
         <p>&copy; Copyright Rimef 2022. All rights Reserved</p>
       </div>
-    </div>
+    </footer>
   );
 };
 

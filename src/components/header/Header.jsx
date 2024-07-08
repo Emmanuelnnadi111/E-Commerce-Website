@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header = () => {
   return (
-    <div className="bg-footerCol w-full p-4">
+    <header className="bg-footerCol w-full p-4">
       <div className=" w-[100%] text-small  md:w-[80%] lg:w-[60%] md:text-sm flex items-center m-auto text-secondaryWhite justify-between">
         <p>
           Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
@@ -16,7 +16,7 @@ const Header = () => {
           <FontAwesomeIcon icon={faAngleDown} />
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
