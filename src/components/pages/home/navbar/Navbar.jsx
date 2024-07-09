@@ -51,7 +51,7 @@ export const Navbar = () => {
       {/* mobile items */}
       <ul
         className={
-          !open
+          open
             ? "border rounded-md bg-slate-500 text-secondaryWhite flex flex-col w-48 ml-auto text-center gap-5 mt-5 lg:hidden"
             : "hidden "
         }

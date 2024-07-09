@@ -12,13 +12,13 @@ import {
 const Footer = () => {
   return (
     <footer className="bg-footerCol text-secondaryWhite mt-10 ">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 pt-10 pb-20 w-full p-4 md:w-[80%] lg:w-[80%] m-auto gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 pt-10 pb-20 w-full p-4 md:w-[100%] lg:w-[80%] m-auto gap-3">
         <div className="text-xs flex flex-col gap-5">
           <h1 className="text-lg ">Exclusive</h1>
           <h2>Subscribe</h2>
           <p>Get 10% off your first order</p>
           <form action="">
-            <div className="relative w-44 md:w-44 rounded-lg border border-secondaryWhite px-2">
+            <div className="relative w-48 md:w-48 rounded-lg border border-secondaryWhite px-2">
               <input
                 type="email"
                 name="email"
@@ -29,7 +29,7 @@ const Footer = () => {
 
               <FontAwesomeIcon
                 icon={faPlay}
-                className="absolute bottom-3 left-36"
+                className="absolute bottom-3 text-xl left-40"
               />
             </div>
           </form>
