@@ -12,7 +12,7 @@ import { faEye, faHeart } from "@fortawesome/free-regular-svg-icons";
 const SecondSection = () => {
   return (
     <div className="py-20">
-      <div className="flex  items-center">
+      <div className="flex  textColor items-center">
         <div className="h-16 bg-primary w-8 rounded-md "></div>
         <p className="text-primary font-semibold">Today’s</p>
       </div>
@@ -55,7 +55,7 @@ const SecondSection = () => {
       <div>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
           <div>
-            <div className="relative">
+            <div className="relative ">
               <div className="bg-searchBg rounded-sm ">
                 <img src={GamePad} alt="" className="block m-auto p-6" />
               </div>
