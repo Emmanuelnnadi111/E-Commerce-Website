@@ -4,6 +4,7 @@ import { Navbar } from "./navbar/Navbar";
 import FirstSection from "./sections/FirstSection";
 import SecondSection from "./sections/SecondSection";
 import ThirdSection from "./sections/ThirdSection";
+import FourthSection from "./sections/FourthSection";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <div className="w-full p-4 m-auto  md:w-[100%] lg:w-[80%] ">
         <SecondSection />
         <ThirdSection />
+        <FourthSection />
       </div>
       <Footer />
     </div>

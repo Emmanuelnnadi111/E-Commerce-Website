@@ -67,6 +67,7 @@ const ThirdSection = () => {
           </div>
         </div>
       </div>
+      <div className="py-10 border-b "></div>
     </div>
   );
 };
