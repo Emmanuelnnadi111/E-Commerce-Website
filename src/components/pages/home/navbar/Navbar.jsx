@@ -52,7 +52,7 @@ export const Navbar = () => {
       <ul
         className={
           open
-            ? "border rounded-md bg-slate-500 text-secondaryWhite flex flex-col w-48 ml-auto text-center gap-5 mt-5 lg:hidden"
+            ? "fixed z-50 left-40 md:left-[35rem] transition duration-300  ease-in-out delay-500   border rounded-md bg-slate-500 text-secondaryWhite flex flex-col w-48  text-center gap-5 mt-5 lg:hidden"
             : "hidden "
         }
       >

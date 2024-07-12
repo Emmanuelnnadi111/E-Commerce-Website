@@ -1,14 +1,57 @@
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import GamePad from "/images/homepage/Frame 611.png";
-import Keyboard from "/images/homepage/Frame 612.png";
-import Monitor from "/images/homepage/Frame 613.png";
-import Chair from "/images/homepage/Frame 614.png";
-import Half from "/images/homepage/sam-moghadam-khamseh-kvmdsTrGOBM-unsplash 1.png";
-import FiveStar from "/images/homepage/Five star.png";
-import FourStar from "/images/homepage/Four Star.png";
-import FourHalfStar from "/images/homepage/Four Half Star.png";
 import { faEye, faHeart } from "@fortawesome/free-regular-svg-icons";
+const items = [
+  {
+    images: "/images/homepage/Frame 611.png",
+    percent: "-40%",
+    header: "HAVIT HV-G92 Gamepad",
+    amount: "$120",
+    price: "$160",
+    rating: "/images/homepage/Five star.png",
+    remaining: "(88)",
+  },
+  {
+    images: "/images/homepage/Frame 612.png",
+    percent: "-35%",
+    header: "AK-900 Wired Keyboard",
+    amount: "$960",
+    price: "$1160",
+    rating: "/images/homepage/Four Star.png",
+    remaining: "(75)",
+    cart: "cart",
+  },
+  {
+    images: "/images/homepage/Frame 613.png",
+    percent: "-30%",
+    header: "IPS LCD Gaming Monitor",
+    amount: "$370",
+    price: "$400",
+    rating: "/images/homepage/Five star.png",
+    remaining: "(99)",
+    padding: "padding",
+  },
+  {
+    images: "/images/homepage/Frame 614.png",
+    percent: "-25%",
+    header: "S-Series Comfort Chair",
+    amount: "$375",
+    price: "$400",
+    rating: "/images/homepage/Four Half Star.png",
+    remaining: "(99)",
+  },
+  {
+    images: "/images/homepage/sam-moghadam-khamseh-kvmdsTrGOBM-unsplash 1.png",
+    percent: "-25%",
+    header: "S-Series Comfort Chair",
+    amount: "$375",
+    price: "$400",
+    rating: "/images/homepage/Four Half Star.png",
+    remaining: "(99)",
+    half: "half",
+  },
+];
+
 const SecondSection = () => {
   return (
     <div className="py-20">
@@ -54,179 +97,59 @@ const SecondSection = () => {
       </div>
       <div>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-          <div>
-            <div className="relative ">
-              <div className="bg-searchBg rounded-sm ">
-                <img src={GamePad} alt="" className="block m-auto p-6" />
-              </div>
-              <div className="absolute top-0  bottom-0 w-full px-3 py-2">
-                <div className="flex justify-between">
-                  <div className="text-secondaryWhite px-2 py-1 rounded-md text-xs h-6 text-center bg-primary">
-                    <p className="">-40%</p>
-                  </div>
-                  <div className="px-2 py-1 rounded-full bg-secondaryWhite">
-                    <FontAwesomeIcon icon={faHeart} />
-                  </div>
-                </div>
-                <div className="">
-                  <FontAwesomeIcon
-                    icon={faEye}
-                    className="flex ml-auto mt-4 px-2 py-1 rounded-full bg-secondaryWhite"
+          {items.map((item, index) => (
+            <div key={index}>
+              <div className="relative ">
+                <div className="bg-searchBg rounded-sm ">
+                  <img
+                    src={item.images}
+                    alt=""
+                    className={
+                      item.padding
+                        ? "p-9"
+                        : "block m-auto p-6" && item.half
+                        ? "p-5 m-auto"
+                        : "block m-auto p-6"
+                    }
                   />
                 </div>
-              </div>
-            </div>
-            <div className="flex flex-col gap-2 mt-2">
-              <p className="font-semibold">HAVIT HV-G92 Gamepad</p>
-              <div className="flex gap-2">
-                <p className="text-primary">$120</p>
-                <p className="text-footer  line-through">$160</p>
-              </div>
-              <div className="flex items-center">
-                <img src={FiveStar} alt="" />
-                <p>(75)</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="relative">
-              <div className="bg-searchBg rounded-sm ">
-                <img src={Keyboard} alt="" className="block m-auto p-8" />
-              </div>
-              <div className="absolute top-0  bottom-0 w-full px-3 py-2">
-                <div className="flex justify-between">
-                  <div className="text-secondaryWhite px-2 py-1 rounded-md text-xs h-6 text-center bg-primary">
-                    <p className="">-35%</p>
+                <div className="absolute top-0  bottom-0 w-full px-3 py-2">
+                  <div className="flex justify-between">
+                    <div className="text-secondaryWhite px-2 py-1 rounded-md text-xs h-6 text-center bg-primary">
+                      <p className="">{item.percent}</p>
+                    </div>
+                    <div className="px-2 py-1 rounded-full bg-secondaryWhite">
+                      <FontAwesomeIcon icon={faHeart} />
+                    </div>
                   </div>
-                  <div className="px-2 py-1 rounded-full bg-secondaryWhite">
-                    <FontAwesomeIcon icon={faHeart} />
+                  <div className="">
+                    <FontAwesomeIcon
+                      icon={faEye}
+                      className="flex ml-auto mt-4 px-2 py-1 rounded-full bg-secondaryWhite"
+                    />
                   </div>
                 </div>
-                <div className="">
-                  <FontAwesomeIcon
-                    icon={faEye}
-                    className="flex ml-auto mt-4 px-2 py-1 rounded-full bg-secondaryWhite"
-                  />
+                {item.cart ? (
+                  <button className="bg-footerCol text-secondaryWhite text-center rounded-sm w-full p-3 absolute bottom-0">
+                    Add to Cart
+                  </button>
+                ) : (
+                  ""
+                )}
+              </div>
+              <div className="flex flex-col gap-2 mt-2">
+                <p className="font-semibold">{item.header}</p>
+                <div className="flex gap-2">
+                  <p className="text-primary">{item.amount}</p>
+                  <p className="text-footer  line-through">{item.price}</p>
                 </div>
-              </div>
-              <button className="bg-footerCol text-secondaryWhite text-center rounded-sm w-full p-3 absolute bottom-0">
-                Add to Cart
-              </button>
-            </div>
-            <div className="flex flex-col gap-2 mt-2">
-              <p className="font-semibold">AK-900 Wired Keyboard</p>
-              <div className="flex gap-2">
-                <p className="text-primary">$960</p>
-                <p className="text-footer  line-through">$1160</p>
-              </div>
-              <div className="flex items-center">
-                <img src={FourStar} alt="" />
-                <p>(99)</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="relative">
-              <div className="bg-searchBg rounded-sm ">
-                <img src={Monitor} alt="" className="block m-auto p-9" />
-              </div>
-              <div className="absolute top-0  bottom-0 w-full px-3 py-2">
-                <div className="flex justify-between">
-                  <div className="text-secondaryWhite px-2 py-1 rounded-md text-xs h-6 text-center bg-primary">
-                    <p className="">-30%</p>
-                  </div>
-                  <div className="px-2 py-1 rounded-full bg-secondaryWhite">
-                    <FontAwesomeIcon icon={faHeart} />
-                  </div>
-                </div>
-                <div className="">
-                  <FontAwesomeIcon
-                    icon={faEye}
-                    className="flex ml-auto mt-4 px-2 py-1 rounded-full bg-secondaryWhite"
-                  />
+                <div className="flex items-center">
+                  <img src={item.rating} alt="" />
+                  <p>{item.remaining}</p>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-2 mt-2">
-              <p className="font-semibold">IPS LCD Gaming Monitor</p>
-              <div className="flex gap-2">
-                <p className="text-primary">$370</p>
-                <p className="text-footer  line-through">$400</p>
-              </div>
-              <div className="flex items-center">
-                <img src={FiveStar} alt="" />
-                <p>(99)</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="relative">
-              <div className="bg-searchBg rounded-sm ">
-                <img src={Chair} alt="" className="block m-auto p-6" />
-              </div>
-              <div className="absolute top-0  bottom-0 w-full px-3 py-2">
-                <div className="flex justify-between">
-                  <div className="text-secondaryWhite px-2 py-1 rounded-md text-xs h-6 text-center bg-primary">
-                    <p className="">-25%</p>
-                  </div>
-                  <div className="px-2 py-1 rounded-full bg-secondaryWhite">
-                    <FontAwesomeIcon icon={faHeart} />
-                  </div>
-                </div>
-                <div className="">
-                  <FontAwesomeIcon
-                    icon={faEye}
-                    className="flex ml-auto mt-4 px-2 py-1 rounded-full bg-secondaryWhite"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col gap-2 mt-2">
-              <p className="font-semibold">S-Series Comfort Chair</p>
-              <div className="flex gap-2">
-                <p className="text-primary">$375</p>
-                <p className="text-footer  line-through">$400</p>
-              </div>
-              <div className="flex items-center">
-                <img src={FourHalfStar} alt="" />
-                <p>(99)</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="relative">
-              <div className="bg-searchBg rounded-sm ">
-                <img src={Half} alt="" className="block m-auto p-5" />
-              </div>
-              <div className="absolute top-0  bottom-0 w-full px-3 py-2">
-                <div className="flex justify-between">
-                  <div className="text-secondaryWhite px-2 py-1 rounded-md text-xs h-6 text-center bg-primary">
-                    <p className="">-25%</p>
-                  </div>
-                  <div className="px-2 py-1 rounded-full bg-secondaryWhite">
-                    <FontAwesomeIcon icon={faHeart} />
-                  </div>
-                </div>
-                <div className="">
-                  <FontAwesomeIcon
-                    icon={faEye}
-                    className="flex ml-auto mt-4 px-2 py-1 rounded-full bg-secondaryWhite"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col gap-2 mt-2">
-              <p className="font-semibold">S-Series Comfort Chair</p>
-              <div className="flex gap-2">
-                <p className="text-primary">$375</p>
-                <p className="text-footer  line-through">$400</p>
-              </div>
-              <div className="flex items-center">
-                <img src={FourHalfStar} alt="" />
-                <p>(99)</p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
         <div className="py-10 m-auto">
           <button className="bg-primary px-9 text-sm py-3 rounded-md text-secondaryWhite block m-auto">

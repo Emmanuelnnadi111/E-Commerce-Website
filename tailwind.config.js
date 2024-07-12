@@ -21,6 +21,7 @@ export default {
         footerCol: "#000000",
         searchBg: "#F5F5F5",
         categoriesBg: "rgba(0, 0, 0, 0.3)",
+        gradient: "#D9D9D9",
       },
     },
   },

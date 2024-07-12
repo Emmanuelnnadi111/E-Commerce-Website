@@ -1,31 +1,32 @@
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { useState } from "react";
+
 const categories = [
-  { image: "/images/homepage/Category-CellPhone.png", type: "Phones" },
-  { image: "/images/homepage/Category-Computer.png", type: "Computers" },
-  { image: "/images/homepage/Category-SmartWatch.png", type: "SmartWatch" },
   {
+    id: 1,
+    image: "/images/homepage/Category-CellPhone.png",
+    type: "Phones",
+  },
+  { id: 2, image: "/images/homepage/Category-Computer.png", type: "Computers" },
+  {
+    id: 3,
+    image: "/images/homepage/Category-SmartWatch.png",
+    type: "SmartWatch",
+  },
+  {
+    id: 4,
     image: "/images/homepage/Category-Camera.png",
     type: "Camera",
     bg: "bg-primary",
   },
-  { image: "/images/homepage/Category-Headphone.png", type: "HeadPhones" },
-  { image: "/images/homepage/Category-Gamepad.png", type: "Gaming" },
+  {
+    id: 5,
+    image: "/images/homepage/Category-Headphone.png",
+    type: "HeadPhones",
+  },
+  { id: 6, image: "/images/homepage/Category-Gamepad.png", type: "Gaming" },
 ];
 const ThirdSection = () => {
-  // const [currentIndex, setCurrentIndex] = useState(0);
-
-  // const nextImage = () => {
-  //   setCurrentIndex((prevIndex) => (prevIndex + 1) % categories.length);
-  // };
-
-  // const prevImage = () => {
-  //   setCurrentIndex((prevIndex) =>
-  //     prevIndex === 0 ? categories.length - 1 : prevIndex - 1
-  //   );
-  // };
-
   return (
     <div>
       <div className="flex  gap-3 items-center">
@@ -58,7 +59,7 @@ const ThirdSection = () => {
                     ? `flex flex-col w-full md:w-56  lg:w-44 rounded-sm text-center text-secondaryWhite py-5 gap-3 bg-primary m-auto`
                     : `flex flex-col w-full md:w-56 lg:w-44 rounded-sm text-center py-6 gap-3 bg-categoriesBg m-auto`
                 }
-                key={category.image}
+                key={category.id}
               >
                 <img src={category.image} className="w-20 block m-auto" />
                 <p>{category.type}</p>
