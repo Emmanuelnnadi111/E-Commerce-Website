@@ -18,8 +18,7 @@ const CreatAccount = () => {
       if (!values.name) {
         errors.name = "Please enter your name";
       } else if (
-        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email) &&
-        /0-9/
+        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
       ) {
         errors.email = "Not A valid email address or phone number";
       } else if (!values.password) {
@@ -49,7 +48,11 @@ const CreatAccount = () => {
               name="name"
               id="name"
               placeholder="Name"
-              className="border-0 border-b-2 text-start p-0"
+              className={
+                formik.errors.name
+                  ? "border-primary"
+                  : "border-0 border-b-2 text-start p-0"
+              }
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.name}
@@ -62,7 +65,11 @@ const CreatAccount = () => {
               name="email"
               id="email"
               placeholder="Email or Phone Number"
-              className="border-0 border-b-2 text-start p-0"
+              className={
+                formik.errors.email
+                  ? "border-primary"
+                  : "border-0 border-b-2 text-start p-0"
+              }
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.email}
@@ -74,7 +81,11 @@ const CreatAccount = () => {
               type="password"
               name="password"
               id="password"
-              className="outline-none border-0 border-b-2 text-start p-0"
+              className={
+                formik.errors.password
+                  ? "border-primary"
+                  : "outline-none border-0 border-b-2 text-start p-0"
+              }
               placeholder="Password"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
