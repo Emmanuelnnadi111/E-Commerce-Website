@@ -13,6 +13,7 @@ export default {
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        Inter: ["Inter", "sans-serif"],
       },
       colors: {
         primary: "#DB4444",
@@ -22,6 +23,7 @@ export default {
         searchBg: "#F5F5F5",
         categoriesBg: "rgba(0, 0, 0, 0.3)",
         gradient: "#D9D9D9",
+        circle: "#2F2E30",
       },
     },
   },

@@ -46,7 +46,7 @@ const items = [
     rating: "/images/homepage/Five star.png",
     remaining: "(65)",
     half: "half",
-    checkbox: "",
+    checkbox: "check",
   },
   {
     images: "/images/homepage/Frame 608.png",
@@ -56,7 +56,7 @@ const items = [
     rating: "/images/homepage/Five star.png",
     remaining: "(35)",
     half: "half",
-    checkbox: "",
+    checkbox: "check",
   },
   {
     images: "/images/homepage/Frame 608 (1).png",
@@ -67,7 +67,7 @@ const items = [
     rating: "/images/homepage/Four Half Star.png",
     remaining: "(55)",
     half: "half",
-    checkbox: "",
+    checkbox: "check",
   },
   {
     images: "/images/homepage/Frame 608 (2).png",
@@ -77,7 +77,7 @@ const items = [
     rating: "/images/homepage/Four Half Star.png",
     remaining: "(55)",
     half: "half",
-    checkbox: "",
+    checkbox: "check",
   },
 ];
 const SixthSection = () => {
@@ -147,9 +147,24 @@ const SixthSection = () => {
                 <img src={item.rating} alt="" />
                 <p>{item.remaining}</p>
               </div>
-              <div>
-                <input type="checkbox" name="checked" id="check" />
-              </div>
+              {item.checkbox ? (
+                <div className="flex gap-2">
+                  <input
+                    type="radio"
+                    name="checked"
+                    id="check"
+                    className="bg-footerCol"
+                  />
+                  <input
+                    type="radio"
+                    name="checked"
+                    id="check"
+                    className="bg-primary"
+                  />
+                </div>
+              ) : (
+                ""
+              )}
             </div>
           </div>
         ))}

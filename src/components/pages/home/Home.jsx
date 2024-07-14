@@ -7,6 +7,8 @@ import ThirdSection from "./sections/ThirdSection";
 import FourthSection from "./sections/FourthSection";
 import FifthSection from "./sections/FifthSection";
 import SixthSection from "./sections/SixthSection";
+import SeventhSection from "./sections/SeventhSection";
+import EightSection from "./sections/EightSection";
 
 const Home = () => {
   return (
@@ -22,6 +24,8 @@ const Home = () => {
         <FourthSection />
         <FifthSection />
         <SixthSection />
+        <SeventhSection />
+        <EightSection />
       </div>
       <Footer />
     </div>

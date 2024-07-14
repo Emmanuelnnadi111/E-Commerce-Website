@@ -39,7 +39,10 @@ export const Navbar = () => {
               placeholder="What are you looking for?"
               className="bg-transparent outline-none border-0  w-full placeholder:text-sm"
             />
-            <FontAwesomeIcon icon={faSearch} />
+            <FontAwesomeIcon
+              icon={faSearch}
+              className="text-footerCol text-opacity-30"
+            />
           </div>
           <FontAwesomeIcon icon={faHeart} />
           <FontAwesomeIcon icon={faCartShopping} />
