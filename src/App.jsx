@@ -16,11 +16,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route exact path="/" Component={Home} />
-        <Route exact path="/about" Component={About} />
+        <Route exact path="*" Component={About} />
         <Route exact path="/contact" Component={Contact} />
         <Route exact path="/Signup" Component={Signup} />
         <Route exact path="/login" Component={Login} />
-        <Route exact path="/error" Component={Error} />
+        <Route exact path="*" Component={Error} />
         <Route exact path="/wishlist" Component={Wishlist} />
         <Route exact path="/productDetails" Component={ProductDetails} />
         <Route exact path="/AccountDropDown" Component={AccountDropDown} />
