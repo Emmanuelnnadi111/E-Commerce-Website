@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
-import { faCancel, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const tableItems = [
   {
@@ -18,48 +18,8 @@ const tableItems = [
     quan: "02",
     sub: "$1100",
   },
-  // {
-  //   image: "",
-  //   title: ",
-  //   price1: "$650",
-  //   quan2: "02",
-  //   sub2: "$1100",
-  // },
 ];
-// const customers = [
-//   {
-//     name: "John Cooper",
-//     company: "Microsoft",
-//     phone: "+1 555-123-4567",
-//     email: "john.doe@acmecorp.com",
-//     country: "USA",
-//     status: "Active",
-//   },
-//   {
-//     name: "Jane Smith",
-//     company: "Yahoo",
-//     phone: "+44 20 7946 0958",
-//     email: "jane.smith@techsolutions.co.uk",
-//     country: "UK",
-//     status: "Inactive",
-//   },
-//   {
-//     name: "Hans Müller",
-//     company: "Adobe",
-//     phone: "+49 30 123456",
-//     email: "hans.mueller@muellergmbh.de",
-//     country: "Germany",
-//     status: "Active",
-//   },
-//   {
-//     name: "Marie Dubois",
-//     company: "Tesla",
-//     phone: "+33 1 23456789",
-//     email: "marie.dubois@dubois.fr",
-//     country: "France",
-//     status: "Inactive",
-//   },
-// ];
+
 const Cart = () => {
   return (
     <div>
