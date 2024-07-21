@@ -31,6 +31,7 @@ const CreatAccount = () => {
     <div className="py-20">
       <div className="flex flex-col gap-y-6 md:px-6 lg:p-0 lg:flex-row sm:gap-x-28">
         <div>
+          
           <img src="/images/signup/dl.beatsnoop 1.png" alt="" />
         </div>
         <div className="px-4 sm:p-0 flex flex-col items-start justify-center gap-y-10 lg:w-[26%] md:w-full">

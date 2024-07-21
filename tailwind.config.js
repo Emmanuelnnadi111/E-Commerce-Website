@@ -24,6 +24,7 @@ export default {
         categoriesBg: "rgba(0, 0, 0, 0.3)",
         gradient: "#D9D9D9",
         circle: "#2F2E30",
+        linear: "#460346be",
       },
     },
   },
