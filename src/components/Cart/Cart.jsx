@@ -21,6 +21,7 @@ const tableItems = [
 ];
 
 const Cart = () => {
+  let isProductPresent = false;
   return (
     <div>
       <Header />

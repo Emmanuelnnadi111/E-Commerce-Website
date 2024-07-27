@@ -1,27 +1,45 @@
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
-
+import { auth } from "../../firebase/Firebase";
+import { toast } from "react-toastify";
+const initialValues = {
+  email: "",
+  password: "",
+};
+const validate = (values) => {
+  const errors = {};
+  if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+    errors.email = "Not A valid email address or phone number";
+  } else if (!values.password) {
+    errors.password = "Please enter a password between 8-20 characters";
+  }
+  return errors;
+};
 const LoginValidate = () => {
   const navigate = useNavigate();
-  const login = () => {
-    navigate("/login");
+
+  const account = () => {
+    navigate("/AccountDropDown");
   };
+  const onSubmit = async (values) => {
+    try {
+      await signInWithEmailAndPassword(auth, values.email, values.password);
+      toast.success("User logged in successfully!!", {
+        position: "top-center",
+      });
+      account();
+    } catch (error) {
+      toast.error(String(error), { position: "bottom-right" });
+    }
+  };
+
   const formik = useFormik({
-    initialValues: {
-      email: "",
-      password: "",
-    },
-    onSubmit: () => {},
-    validate: (values) => {
-      const errors = {};
-      if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-        errors.email = "Not A valid email address or phone number";
-      } else if (!values.password) {
-        errors.password = "Please enter a password between 8-20 characters";
-      }
-      return errors;
-    },
+    initialValues,
+    onSubmit,
+    validate,
   });
+
   return (
     <div className="py-20">
       <div className="flex flex-col gap-y-6 md:px-6 lg:p-0 lg:flex-row sm:gap-x-28">
@@ -77,7 +95,7 @@ const LoginValidate = () => {
                 Log In
               </button>
               <p>
-                <a href="" onClick={login} className="text-primary ">
+                <a href="" onClick={account} className="text-primary ">
                   Forget Password?
                 </a>
               </p>
