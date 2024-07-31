@@ -127,13 +127,13 @@ const SecondSection = () => {
                   <img
                     src={item.images}
                     alt=""
-                    // className={
-                    //   item.padding
-                    //     ? "p-9"
-                    //     : "block m-auto p-6" && item.half
-                    //     ? "p-5 m-auto"
-                    //     : "block m-auto p-6"
-                    // }
+                    className={
+                      item.padding
+                        ? "p-9"
+                        : "block m-auto p-6" && item.half
+                        ? "p-5 m-auto"
+                        : "block m-auto p-6"
+                    }
                   />
                 </div>
                 <div className="absolute top-0  bottom-0 w-full px-3 py-2">
@@ -154,7 +154,7 @@ const SecondSection = () => {
                 </div>
                 {item && (
                   <button
-                    className="bg-[#58575779] text-secondaryWhite text-center rounded-sm w-full p-3 absolute bottom-0 hidden group-hover:block"
+                    className="bg-footerCol text-secondaryWhite text-center rounded-sm w-full p-3 absolute bottom-0  "
                     onClick={() => addToCartHandler(item)}
                   >
                     Add to Cart
