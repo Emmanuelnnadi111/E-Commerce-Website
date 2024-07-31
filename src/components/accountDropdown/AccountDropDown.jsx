@@ -13,11 +13,10 @@ import SixthSection from "../pages/home/sections/SixthSection";
 import SeventhSection from "../pages/home/sections/SeventhSection";
 import EightSection from "../pages/home/sections/EightSection";
 import Footer from "../footer/Footer";
-import { Navigate, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { navlinks } from "../pages/home/navbar/navlinks";
 import { faSearch } from "@fortawesome/free-solid-svg-icons/faSearch";
 import { faBars, faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import Cart from "../Cart/Cart";
 
 const accountitem = [
   { name: "Manage My Account", icon: faUser },
