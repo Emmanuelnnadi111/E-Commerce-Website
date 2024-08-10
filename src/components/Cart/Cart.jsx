@@ -4,6 +4,7 @@ import Header from "../header/Header";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { removeItem, updateQuantity } from "../../features/cart/CartSlice";
+import { Navigate } from "react-router-dom";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -31,7 +32,12 @@ const Cart = () => {
       <Header />
       <div className="w-full p-4 m-auto  md:w-[100%] lg:w-[80%] ">
         <div className="py-20">
-          <p>Home / Cart</p>
+          <p>
+            <a href="">
+              <Navigate to="/">Home</Navigate>
+            </a>
+            / Cart
+          </p>
         </div>
         {cartItems.length > 0 ? (
           <div>
